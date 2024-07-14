@@ -110,6 +110,8 @@ export class WebtoonPlugin implements Plugin {
             thumbnail = 'NOT FOUND'; // Change to empty string if no thumbnail found, currently just for debugging
         }
 
+        // Get ID from the url
+        const id = url.split('title_no=')[1];
 
         // Placeholder metadata
         const metadata: Metadata = {
@@ -121,6 +123,7 @@ export class WebtoonPlugin implements Plugin {
             rating: rating,
             thumbnail: thumbnail,
             url: url,
+            id: id,
         };
 
         return metadata;

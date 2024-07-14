@@ -15,6 +15,7 @@ export interface Plugin {
 }
 
 export interface Metadata {
+    id: string;
     title: string;
     author: string;
     description: string;
